@@ -10,6 +10,7 @@ load_dotenv()
 app = Flask("Maneskin website")
 app.secret_key = secrets.token_hex()
 app.config['DIR'] = getcwd()
+print(environ['DATABASE_URL'])
 app.config['SQLALCHEMY_DATABASE_URI'] = environ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # app.config['USER'] = 'Василь'
