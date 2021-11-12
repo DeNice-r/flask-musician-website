@@ -9,3 +9,6 @@ class User(db.Model):
 
     def __repr__(self):
         return f"{self.id=}, {self.username=}, {self.password=}, {self.last_login=}"
+
+
+db.create_all()
