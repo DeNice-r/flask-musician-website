@@ -6,7 +6,7 @@
 {% for album in albums %}
     <div class="rounded-2 position-relative m-2" style="background-color:  white; width: 280px; height: 350px">
         <div class = "d-flex justify-content-center mt-3" style="top: 3px" >
-                <img src="static/{{ album.image }}" alt="" style="width: 250px; height: 280px">
+                <img src="{{ album.image }}" alt="" style="width: 250px; height: 280px">
         </div>
         <div class="text-black" style="text-align: center">
             {{ album.name }},
