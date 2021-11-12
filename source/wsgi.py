@@ -1,4 +1,4 @@
-from app import app
+from app import *
 
 
 # Controllers
@@ -9,6 +9,10 @@ import controllers.album_controller
 import controllers.login_controller
 import controllers.error_controller
 
+import models.album
+import models.user
+
 
 if __name__ == '__main__':
+    db.create_all()
     app.run(host='0.0.0.0', port='80', debug=False)
