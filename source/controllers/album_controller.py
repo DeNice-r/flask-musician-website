@@ -18,6 +18,7 @@ def albums():
     return render_template("albums.html", app=app, albums=Album.query.all())
 
 
+# Add object to db
 # alb = Album(image='киш.jpg', name='Ну тупо альбом', year=2007, last_updated=datetime.datetime.now())
 # db.session.add(alb)
 # db.session.commit()

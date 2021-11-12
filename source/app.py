@@ -12,8 +12,6 @@ app.secret_key = secrets.token_hex()
 app.config['DIR'] = getcwd()
 # Heroku DB link
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2" + environ['DATABASE_URL'][8:]
-# Local DB link
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:78de78@localhost/lab11base'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # app.config['USER'] = 'Василь'
 try:
