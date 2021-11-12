@@ -4,6 +4,7 @@
     <list default="true" id="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/source/models/album.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/models/album.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/wsgi.py" afterDir="false" />
     </list>
     <list id="e15aaaa4-0393-44c2-82fb-e54306c322f1" name="Changes by Soupa" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +152,7 @@
       <workItem from="1636650667051" duration="9185000" />
       <workItem from="1636708375504" duration="6695000" />
       <workItem from="1636720204469" duration="68000" />
-      <workItem from="1636720352248" duration="3650000" />
+      <workItem from="1636720352248" duration="3787000" />
     </task>
     <servers />
   </component>

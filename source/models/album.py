@@ -10,6 +10,3 @@ class Album(db.Model):
 
     def __repr__(self):
         return f"{self.id=}, {self.image=}, {self.name=}, {self.year=}, {self.last_updated=}"
-
-
-db.create_all()
