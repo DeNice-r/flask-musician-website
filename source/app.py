@@ -2,7 +2,7 @@ import sqlalchemy.exc
 from flask import Flask, render_template
 from dotenv import load_dotenv
 import secrets
-from os import getcwd
+from os import getcwd, environ
 from flask_sqlalchemy import SQLAlchemy
 
 load_dotenv()
@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask("Maneskin website")
 app.secret_key = secrets.token_hex()
 app.config['DIR'] = getcwd()
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:78de78@localhost/lab11base'
+app.config['SQLALCHEMY_DATABASE_URI'] = environ['DATABASE_URL']
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 # app.config['USER'] = 'Василь'
 try:
