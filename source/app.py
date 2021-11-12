@@ -5,8 +5,6 @@ import secrets
 from os import getcwd
 from flask_sqlalchemy import SQLAlchemy
 
-from sqlalchemy import create_engine
-
 load_dotenv()
 
 app = Flask("Maneskin website")
