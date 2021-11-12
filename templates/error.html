@@ -1,0 +1,13 @@
+{% extends "база.html" %}
+{{ super() }}
+{% block title %}Error{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="static/style/error.css"> {% endblock %}
+{% block content %}
+<div class="error_container">
+    <div class = "error">
+        <img src="static/404.png" alt="404"/>
+    </div>
+</div>
+{% endblock %}

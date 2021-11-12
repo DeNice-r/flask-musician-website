@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <script src="static/bootstrap/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="static/bootstrap/bootstrap.min.css"/>
+    <title>{% block title %}{% endblock %} - КіШ</title>
+    {% endblock %}
+</head>
+<body class="text-white bg-secondary">
+{% block navbar %}
+    <header class="mb-3 fixed-top position-sticky">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
+            <div class="container">
+                <a class="navbar-brand" href="/"><img src="static/logo.png" style="width: 30px; height: 30px;"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a id="main" class="btn btn-dark nav-a me-3" href="/">Головна</a>
+                        </li>
+                        <li  class="nav-item">
+                            <a id = "about" class="btn btn-dark nav-a me-3" href="/about">Про нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id = "history" class="btn btn-dark nav-a me-3" href="/history">Історія</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id = "albums" class="btn btn-dark nav-a me-3" href="/albums">Альбоми</a>
+                        </li>
+                        {# All items below #}<li class="ms-auto"></li> {# will be right-sided #}
+                        <li>
+                            {% if app.config["USER"] %}
+                                <span class="btn btn-dark">
+                                    {{ app.config["USER"] }}
+                                </span>
+                                <a  class="btn btn-danger" href="/login">Log Out</a>
+                            {% else %}
+                                <a  class="btn btn-dark nav-a" href="/login">Log In</a>
+                            {% endif %}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+<script src="static/js/script.js">
+
+</script>
+</body>
+</html>
