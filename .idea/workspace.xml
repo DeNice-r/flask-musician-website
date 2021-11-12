@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <list id="e15aaaa4-0393-44c2-82fb-e54306c322f1" name="Changes by Soupa" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -151,7 +151,7 @@
       <workItem from="1636650667051" duration="9185000" />
       <workItem from="1636708375504" duration="6695000" />
       <workItem from="1636720204469" duration="68000" />
-      <workItem from="1636720352248" duration="191000" />
+      <workItem from="1636720352248" duration="487000" />
     </task>
     <servers />
   </component>
