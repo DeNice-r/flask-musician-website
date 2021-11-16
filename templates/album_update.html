@@ -1,0 +1,36 @@
+{% extends "база.html" %}
+{{ super() }}
+{% block title %}Редагування{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/error.css') }}"> {% endblock %}
+{% block content %}
+<main class="container p-2 text-black">
+<div class="bg-light p-5 rounded">
+
+<form method="post" enctype="multipart/form-data">
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <div class="form-floating p-1">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Альбом" value="{{ current_album.name if current_album is defined else '' }}" required>
+                <label for="name">Назва альбому</label>
+            </div>
+            <div class="form-floating p-1">
+                <input type="text" class="form-control" id="repeat_password" name="year" placeholder="Рік" value = "{{ current_album.year if current_album is defined else '' }}" required>
+                <label for="repeat_password">Рік випуску</label>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3 p-1">
+            <label class="custom-file-label p-1" for="file">Обкладинка альбому</label>
+            {% if current_album is defined %}
+                <img src="{{ url_for('static', filename=current_album.image) }}" alt="" class="img-thumbnail">
+            {% endif %}
+            <input type="file" class="form-control" name="image" id="file">
+        </div>
+        <button class="btn btn-lg btn-dark fw-bold btn-primary" type="submit">Зберегти</button>
+    </div>
+</form>
+</div>
+</main>
+{% endblock %}

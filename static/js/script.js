@@ -1,5 +1,5 @@
 let a = document.querySelectorAll('.nav-a')
-
+let ms = document.querySelectorAll('.message')
 let page_name = window.location.href
 
 if(page_name.endsWith('/')){
@@ -21,8 +21,14 @@ if(page_name.endsWith('albums')){
     a[3].classList.remove('btn-dark')
     a[3].classList.add('btn-secondary')
 }
+
 if(page_name.endsWith('login')){
     a[4].classList.remove('btn-dark')
     a[4].classList.add('btn-secondary')
 }
 
+setTimeout(() => {
+    for (let m of ms) {
+        m.remove()
+    }
+}, 3000)

@@ -3,9 +3,9 @@
 <head>
     {% block head %}
     <meta charset="UTF-8">
-    <script src="static/bootstrap/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='bootstrap/bootstrap.min.js') }}"></script>
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-    <link rel="stylesheet" href="static/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/bootstrap.min.css') }}"/>
     <title>{% block title %}{% endblock %} - КіШ</title>
     {% endblock %}
 </head>
@@ -33,15 +33,20 @@
                         <li class="nav-item">
                             <a id = "albums" class="btn btn-dark nav-a me-3" href="/albums">Альбоми</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a id = "albums" class="btn btn-dark nav-a me-3" href="/album_update">Створити альбом</a>
+                        </li>
+                        {% endif %}
                         {# All items below #}<li class="ms-auto"></li> {# will be right-sided #}
                         <li>
-                            {% if app.config["USER"] %}
+                            {% if user.is_authenticated %}
                                 <span class="btn btn-dark">
-                                    {{ app.config["USER"] }}
+                                    {{ user.username }}
                                 </span>
-                                <a  class="btn btn-danger" href="/login">Log Out</a>
+                                <a  class="btn btn-danger" href="/logout">Вийти</a>
                             {% else %}
-                                <a  class="btn btn-dark nav-a" href="/login">Log In</a>
+                                <a  class="btn btn-dark nav-a" href="/login">Увійти</a>
                             {% endif %}
                         </li>
                     </ul>
@@ -50,11 +55,15 @@
         </nav>
     </header>
 {% endblock %}
+{% for classes, message in get_flashed_messages(with_categories=True) %}
+    <div class="{{ classes }} message">{{ message }}</div>
+{% endfor %}
+
 <div class="container">
     {% block content %}
     {% endblock %}
 </div>
-<script src="static/js/script.js">
+<script src="{{ url_for('static', filename='js/script.js') }}">
 
 </script>
 </body>
