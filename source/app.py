@@ -18,6 +18,9 @@ app.secret_key = environ['SECRET_KEY']
 # Current working directory
 app.config['DIR'] = getcwd()
 
+# Режим відладки
+app.config['DEBUG'] = eval(environ['DEBUG'])
+
 # Allowed image extensions
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['PICTURE_EXTENSIONS'] = ['png', 'jpg', 'jpeg', 'gif']
