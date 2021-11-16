@@ -1,5 +1,5 @@
 from app import app
-from flask import request
+from flask import request, flash
 from secrets import token_urlsafe
 from urllib.parse import urlparse, urljoin
 import os
@@ -30,6 +30,13 @@ def secure_save_image(image):
         image.save('static/' + path)
 
         return path
+
+
+def secure_remove_image(image_path):
+    if os.path.isfile('static/' + image_path):
+        os.remove('static/' + image_path)
+    else:
+        flash('Файл не існує на сервері.', 'alert alert-danger')
 
 
 def is_url_safe(target):

@@ -42,7 +42,6 @@ lm.login_message_category = 'alert alert-danger'
 # print(Accounts.query.all())
 
 
-# REMOVE
 # Add new user
 # from models.user import User
 # if len(User.query.all()) == 0:
@@ -51,8 +50,3 @@ lm.login_message_category = 'alert alert-danger'
 #     u = User(username='admin', password=generate_password_hash('password'), last_login=datetime.datetime.now())
 #     db.session.add(u)
 #     db.session.commit()
-
-
-
-
-

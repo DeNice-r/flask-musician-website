@@ -5,7 +5,7 @@ from flask import render_template, request, redirect, flash, url_for
 from app import app, db
 from models.album import Album
 from flask_login import login_required
-from utils import secure_save_image
+from utils import secure_save_image, secure_remove_image
 from flask_login import current_user
 
 
@@ -43,7 +43,7 @@ def album_update():
                     # если картинка подходит
                     saved_path = secure_save_image(image)
                     if saved_path is not None:
-                        os.remove('static/' + current_album.image)
+                        secure_remove_image(current_album.image)
                         current_album.image = saved_path
                 current_album.name = request.form['name']
                 current_album.year = request.form['year']
@@ -56,7 +56,7 @@ def album_update():
                 if request.args.get('delete') == '1':
                     # то удалить
                     # сначала картинку
-                    os.remove('static/' + current_album.image)
+                    secure_remove_image(current_album.image)
                     # потом данные из бд
                     db.session.delete(current_album)
                     db.session.commit()
