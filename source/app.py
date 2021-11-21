@@ -1,55 +1,50 @@
-import datetime
-
 from flask import Flask
 from dotenv import load_dotenv
 from os import getcwd, environ
-from flask_login import LoginManager
+from flask_login import LoginManager, current_user
 from flask_sqlalchemy import SQLAlchemy
 
 
-# Load environment variables
+# Завантажуємо змінні середовища
 load_dotenv()
 
 app = Flask("Maneskin website")
 
-# Secret key (e.g. to receive post requests)
+# Секретний ключ (потрібен, наприклад, щоб отримувати POST-запити)
 app.secret_key = environ['SECRET_KEY']
 
-# Current working directory
+# Папка, у якій працює програма
 app.config['DIR'] = getcwd()
 
 # Режим відладки
 app.config['DEBUG'] = eval(environ['DEBUG'])
 
-# Allowed image extensions
+# Прийнятні розширення картинок
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['PICTURE_EXTENSIONS'] = ['png', 'jpg', 'jpeg', 'gif']
 
-# App DB configuration
+# Конфігурація підключення до бд
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2" + environ['DATABASE_URL'][8:]
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
-# DB connection creation
+# Створення підключення до бд
 db = SQLAlchemy(app)
 
-# Login manager creation
+# Створення менеджера авторизації
 lm = LoginManager(app)
 
-# Login manager configuration
+# Конфігурація менеджера авторизації
 lm.login_view = '/login'
 lm.login_message = 'Ця сторінка доступна лише авторизованим користувачам.'
 lm.login_message_category = 'alert alert-danger'
 
-# Notes
-# app.config['USER'] = 'Василь'
-# print(Accounts.query.all())
+
+# Додання контексту у темплейти
+@app.context_processor
+def inject_app():
+    return {'app': app}
 
 
-# Add new user
-# from models.user import User
-# if len(User.query.all()) == 0:
-#     print('11231233333333333333333333333')
-#     from werkzeug.security import generate_password_hash
-#     u = User(username='admin', password=generate_password_hash('password'), last_login=datetime.datetime.now())
-#     db.session.add(u)
-#     db.session.commit()
+@app.context_processor
+def inject_user():
+    return {'user': current_user}
