@@ -14,7 +14,7 @@
     <header class="mb-3 fixed-top position-sticky">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow">
             <div class="container">
-                <a class="navbar-brand" href="/"><img src="static/logo.png" style="width: 30px; height: 30px;"></a>
+                <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" style="width: 30px; height: 30px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
