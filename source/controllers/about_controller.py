@@ -5,4 +5,4 @@ from flask_login import current_user
 
 @app.route('/about')
 def about():
-    return render_template('about.html', app=app, user=current_user)
+    return render_template('about.html')

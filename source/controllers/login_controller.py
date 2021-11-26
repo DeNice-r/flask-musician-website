@@ -3,7 +3,7 @@ from app import app, db
 from flask import render_template, redirect, flash, request
 from models.user import User
 from flask_login import login_required, current_user, login_user, logout_user
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from utils import is_url_safe
 
 
@@ -39,6 +39,35 @@ def login():
             flash('Неправильний логін або пароль', 'alert alert-danger')
     # request.method == 'GET'
     return render_template("login.html")
+
+
+@app.route('/register', methods=['GET', 'POST'])
+@login_required
+def register():
+    # Якщо метод пост
+    if request.method == 'POST':
+        # Запам'ятовуємо логін та пароль, після чого перевіряємо їх коректність
+        user_login = request.form['login']
+        user_password = request.form['password']
+
+        if user_login and user_password:
+            user = User.query.filter_by(username=user_login).first()
+            # Якщо користувача з таким ім'ям немає
+            if user is None:
+                # то створюємо нового
+                new_user = User(username=user_login, password=generate_password_hash(user_password))
+                try:
+                    db.session.add(new_user)
+                    db.session.commit()
+                except:
+                    pass
+                flash('Користувача успішно створено', "alert alert-success")
+                return render_template('register.html')
+            else:
+                flash("Користувач з таким ім'ям вже існує", "alert alert-danger")
+
+    # request.method == 'GET'
+    return render_template('register.html')
 
 
 @app.route('/logout')

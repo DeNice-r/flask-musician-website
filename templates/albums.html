@@ -1,33 +1,39 @@
-{% extends "база.html" %}
+{% extends "layout.html" %}
 {{ super() }}
 {% block title %}Альбоми{% endblock %}
 {% block content %}
 <div class="d-flex justify-content-center rounded">
 {% for album in albums %}
-    <div class="bg-light rounded-2 position-relative m-2 col-lg-3">
+    <div class="bg-light rounded-2 position-relative m-2 col-lg-3" style="height: 500px;">
         <div style="width: 90%; height: 100%; margin: 0 auto">
             <img src="{{ url_for('static', filename=album.image) }}" alt="" class="col-12 mt-3" style="height: 75%; width: 100%">
-        <div class="d-flex justify-content-between p-2">
-            <div class="d-flex justify-content-center text-black align-content-center col-8" style="text-align: center; font-size: 20px">
-                {{ album.name }},
-                <br>
-                {{ album.year }} рік
-            </div>
-            {% if user.is_authenticated %}
-            <div class="d-flex justify-content-end">
-                <div><a class="btn btn-white fw-bold p-1" href="album_update?album_id={{ album.id }}"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" style="width: 30px; height: 30px"></a></div>
-                <div><a class="btn btn-white fw-bold p-1" href="album_update?album_id={{ album.id }}&delete=1"><img src="https://www.nicepng.com/png/detail/242-2425648_close-remove-delete-exit-cross-cancel-trash-comments.png" style="width: 30px; height: 30px"></a></div>
-                {# TODO: Кнопка для удаления. href="album_update?album_id={{ album.id }}&delete=1" #}
-                {# DONE BY BOHDAN #}
-            </div>
+            {% if not user.is_authenticated %}
+                <div class="d-flex justify-content-center text-black align-content-center mt-2" style="text-align: center; font-size: 20px">
+                    {{ album.name }},
+                    <br>
+                    {{ album.year }} рік
+                </div>
             {% endif %}
+            {% if user.is_authenticated %}
+                <div class="d-flex justify-content-between p-2">
+                    <div class="d-flex justify-content-center text-black align-content-center" style="text-align: center; font-size: 20px">
+                        {{ album.name }},
+                        <br>
+                        {{ album.year }} рік
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <div><a class="btn btn-white fw-bold p-1" href="album_update?album_id={{ album.id }}"><img src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-new-icon-22.png" style="width: 30px; height: 30px"></a></div>
+                        <div><a class="btn btn-white fw-bold p-1" href="album_update?album_id={{ album.id }}&delete=1"><img src="https://www.nicepng.com/png/detail/242-2425648_close-remove-delete-exit-cross-cancel-trash-comments.png" style="width: 30px; height: 30px"></a></div>
+                        {# DONE BY BOHDAN #}
+                    </div>
+                </div>
+            {% endif %}
+            </div>
         </div>
-        </div>
-    </div>
-    {% if (loop.index) is divisibleby 4 %}
-        </div>
-        <div class=" d-flex justify-content-center rounded">
-    {% endif %}
+        {% if (loop.index) is divisibleby 4 %}
+            </div>
+            <div class=" d-flex justify-content-center rounded">
+        {% endif %}
 {% endfor %}
 </div>
 {% endblock %}

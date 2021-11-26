@@ -8,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 # Завантажуємо змінні середовища
 load_dotenv()
 
-app = Flask("Maneskin website")
+app = Flask("K&J website")
 
 # Секретний ключ (потрібен, наприклад, щоб отримувати POST-запити)
 app.secret_key = environ['SECRET_KEY']

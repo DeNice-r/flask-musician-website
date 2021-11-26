@@ -12,7 +12,7 @@
 <body class="text-white bg-secondary">
 {% block navbar %}
     <header class="mb-3 fixed-top position-sticky">
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark box-shadow">
             <div class="container">
                 <a class="navbar-brand" href="/"><img src="static/logo.png" style="width: 30px; height: 30px;"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -44,6 +44,7 @@
                                 <span class="btn btn-dark">
                                     {{ user.username }}
                                 </span>
+                                <a class="btn btn-dark" href="/register">Додати користувача</a>
                                 <a  class="btn btn-danger" href="/logout">Вийти</a>
                             {% else %}
                                 <a  class="btn btn-dark nav-a" href="/login">Увійти</a>
@@ -55,16 +56,17 @@
         </nav>
     </header>
 {% endblock %}
-{% for classes, message in get_flashed_messages(with_categories=True) %}
-    <div class="{{ classes }} message">{{ message }}</div>
-{% endfor %}
 
 <div class="container">
+    {% for classes, message in get_flashed_messages(with_categories=True) %}
+        <div class="{{ classes }} message">{{ message }}</div>
+    {% endfor %}
     {% block content %}
     {% endblock %}
 </div>
 <script src="{{ url_for('static', filename='js/script.js') }}">
 
 </script>
+
 </body>
 </html>
