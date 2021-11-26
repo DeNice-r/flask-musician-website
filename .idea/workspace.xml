@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/controllers/about_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/controllers/about_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/controllers/login_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/controllers/login_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/models/album.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/models/album.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/source/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/album_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/album_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/albums.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albums.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/база.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <list id="e986f0a2-78ad-4730-80eb-5b6411e9b93f" name="Changes by Okashi" comment="" />
-    <list id="e15aaaa4-0393-44c2-82fb-e54306c322f1" name="Changes by Soupa" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/albums.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albums.html" afterDir="false" />
-    </list>
+    <list id="e15aaaa4-0393-44c2-82fb-e54306c322f1" name="Changes by Soupa" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,17 +47,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/templates/albums.html">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="1" changelist="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" />
-        <range start1="6" end1="7" start2="6" end2="7" changelist="e15aaaa4-0393-44c2-82fb-e54306c322f1" />
-        <range start1="9" end1="15" start2="9" end2="16" changelist="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" />
-        <range start1="16" end1="22" start2="17" end2="29" changelist="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" />
-        <range start1="23" end1="30" start2="30" end2="36" changelist="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" />
-      </ranges>
-    </file>
   </component>
   <component name="ProjectId" id="20gFytGYAPBO7TkAwzpCGdM2dxM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -170,9 +143,9 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JavaScript Debug.layout.html" />
       <item itemvalue="Python.run" />
       <item itemvalue="Python.wsgi" />
-      <item itemvalue="JavaScript Debug.layout.html" />
     </list>
     <recent_temporary>
       <list>
@@ -209,6 +182,7 @@
       <workItem from="1637592333137" duration="2159000" />
       <workItem from="1637685266878" duration="4508000" />
       <workItem from="1637851764763" duration="1033000" />
+      <workItem from="1637911386853" duration="69000" />
     </task>
     <servers />
   </component>
