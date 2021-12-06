@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8aed1a9d-9806-4a47-b9f0-cdfc70a5c056" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Lab 11.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Lab 11.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/album_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/album_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/albums.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/albums.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/база.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <list id="e986f0a2-78ad-4730-80eb-5b6411e9b93f" name="Changes by Okashi" comment="" />
     <list id="e15aaaa4-0393-44c2-82fb-e54306c322f1" name="Changes by Soupa" comment="" />
@@ -161,6 +151,9 @@
       <workItem from="1637851764763" duration="1033000" />
       <workItem from="1637911386853" duration="69000" />
       <workItem from="1637928500161" duration="2634000" />
+      <workItem from="1638200523188" duration="925000" />
+      <workItem from="1638368020233" duration="1379000" />
+      <workItem from="1638392862778" duration="307000" />
     </task>
     <servers />
   </component>
